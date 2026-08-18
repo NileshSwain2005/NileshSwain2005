@@ -27,9 +27,6 @@ def generate_info_card(output_path="info-card.svg"):
         ("Status", "Building, Learning & Scaling 🚀", c_green),
     ]
 
-    # Check for static mode environment variable (useful for static local previews)
-    is_static = os.getenv("STATIC", "0") == "1"
-
     svg_lines = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
         '  <style>',
@@ -41,14 +38,6 @@ def generate_info_card(output_path="info-card.svg"):
         f'    .title {{ font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 11px; fill: {text_secondary}; }}',
         f'    .term-text {{ font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 11.5px; fill: {text_primary}; }}',
         f'    .label {{ fill: {text_secondary}; font-weight: 600; }}',
-        '    @keyframes fadeInSlide {',
-        '      from { opacity: 0; transform: translateY(6px); }',
-        '      to { opacity: 1; transform: translateY(0); }',
-        '    }',
-        '    .animated-row {',
-        '      opacity: ' + ('1' if is_static else '0') + ';',
-        '      animation: ' + ('none' if is_static else 'fadeInSlide 0.4s ease-out forwards') + ';',
-        '    }',
         '  </style>',
         f'  <rect width="100%" height="100%" class="bg" />',
         f'  <rect width="100%" height="100%" class="border" />',
@@ -61,39 +50,29 @@ def generate_info_card(output_path="info-card.svg"):
         '  <line x1="0" y1="32" x2="100%" y2="32" stroke="#21262d" stroke-width="1" />',
         '  ',
         '  <!-- Main Terminal Content -->',
-        '  <g class="term-text" transform="translate(18, 52)">'
+        '  <g class="term-text" transform="translate(18, 52)">',
+        f'    <text x="0" y="0" font-weight="bold" fill="{c_blue}">nilesh</text>',
+        f'    <text x="42" y="0" fill="{text_secondary}">@</text>',
+        f'    <text x="54" y="0" font-weight="bold" fill="{c_purple}">gift-bbsr</text>',
+        f'    <text x="0" y="12" fill="{border_color}">------------------------------------------</text>'
     ]
 
-    # Add Header Username Title
-    svg_lines.append('    <g class="animated-row" style="animation-delay: 0.05s;">')
-    svg_lines.append(f'      <text x="0" y="0" font-weight="bold" fill="{c_blue}">nilesh</text>')
-    svg_lines.append(f'      <text x="42" y="0" fill="{text_secondary}">@</text>')
-    svg_lines.append(f'      <text x="54" y="0" font-weight="bold" fill="{c_purple}">gift-bbsr</text>')
-    svg_lines.append('    </g>')
-    
-    svg_lines.append('    <g class="animated-row" style="animation-delay: 0.10s;">')
-    svg_lines.append(f'      <text x="0" y="12" fill="{border_color}">------------------------------------------</text>')
-    svg_lines.append('    </g>')
-
-    # Generate Data Rows with Staggered Delays
+    # Generate Data Rows
     start_y = 32
     row_height = 24
 
     for idx, (label, val, color) in enumerate(data):
         y_pos = start_y + (idx * row_height)
-        delay = 0.15 + (idx * 0.06)
-        
-        svg_lines.append(f'    <g class="animated-row" style="animation-delay: {delay:.2f}s;">')
-        svg_lines.append(f'      <text x="0" y="{y_pos}" class="label" fill="{color}">{label.ljust(9)}:</text>')
-        svg_lines.append(f'      <text x="80" y="{y_pos}">{val}</text>')
+        svg_lines.append(f'    <g>')
+        svg_lines.append(f'      <text x="0" y="{y_pos}" class="label" fill="{color}">{label}:</text>')
+        svg_lines.append(f'      <text x="75" y="{y_pos}">{val}</text>')
         svg_lines.append('    </g>')
 
-    # Add Color Palette Circles at Bottom
+    # Palette Circles
     palette_y = start_y + (len(data) * row_height) + 14
-    palette_delay = 0.15 + (len(data) * 0.06) + 0.05
     colors = [c_blue, c_green, c_purple, c_yellow, c_cyan, "#f85149", "#ffffff"]
     
-    svg_lines.append(f'    <g class="animated-row" style="animation-delay: {palette_delay:.2f}s;">')
+    svg_lines.append('    <g>')
     for idx, col in enumerate(colors):
         cx = idx * 20 + 6
         svg_lines.append(f'      <circle cx="{cx}" cy="{palette_y}" r="6" fill="{col}" />')
@@ -102,11 +81,11 @@ def generate_info_card(output_path="info-card.svg"):
     svg_lines.append('  </g>')
     svg_lines.append('</svg>')
 
-    # Write output SVG
+    # Save to root folder
     with open(output_path, "w", encoding="utf-8") as f:
         f.write("\n".join(svg_lines))
 
-    print(f"Successfully generated {output_path}")
+    print(f"Info card successfully created at: {os.path.abspath(output_path)}")
 
 if __name__ == "__main__":
     generate_info_card()

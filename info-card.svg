@@ -8,14 +8,6 @@
     .title { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 11px; fill: #8b949e; }
     .term-text { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 11.5px; fill: #c9d1d9; }
     .label { fill: #8b949e; font-weight: 600; }
-    @keyframes fadeInSlide {
-      from { opacity: 0; transform: translateY(6px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .animated-row {
-      opacity: 0;
-      animation: fadeInSlide 0.4s ease-out forwards;
-    }
   </style>
   <rect width="100%" height="100%" class="bg" />
   <rect width="100%" height="100%" class="border" />
@@ -29,43 +21,39 @@
   
   <!-- Main Terminal Content -->
   <g class="term-text" transform="translate(18, 52)">
-    <g class="animated-row" style="animation-delay: 0.05s;">
-      <text x="0" y="0" font-weight="bold" fill="#58a6ff">nilesh</text>
-      <text x="42" y="0" fill="#8b949e">@</text>
-      <text x="54" y="0" font-weight="bold" fill="#bc8cff">gift-bbsr</text>
+    <text x="0" y="0" font-weight="bold" fill="#58a6ff">nilesh</text>
+    <text x="42" y="0" fill="#8b949e">@</text>
+    <text x="54" y="0" font-weight="bold" fill="#bc8cff">gift-bbsr</text>
+    <text x="0" y="12" fill="#30363d">------------------------------------------</text>
+    <g>
+      <text x="0" y="32" class="label" fill="#58a6ff">OS:</text>
+      <text x="75" y="32">GIFT Autonomous, BBSR (CSE '28)</text>
     </g>
-    <g class="animated-row" style="animation-delay: 0.10s;">
-      <text x="0" y="12" fill="#30363d">------------------------------------------</text>
+    <g>
+      <text x="0" y="56" class="label" fill="#bc8cff">Host:</text>
+      <text x="75" y="56">Bhanjanagar, Ganjam, Odisha</text>
     </g>
-    <g class="animated-row" style="animation-delay: 0.15s;">
-      <text x="0" y="32" class="label" fill="#58a6ff">OS       :</text>
-      <text x="80" y="32">GIFT Autonomous, BBSR (CSE '28)</text>
+    <g>
+      <text x="0" y="80" class="label" fill="#3fb950">Role:</text>
+      <text x="75" y="80">Full-Stack Developer & AI/ML Enthusiast</text>
     </g>
-    <g class="animated-row" style="animation-delay: 0.21s;">
-      <text x="0" y="56" class="label" fill="#bc8cff">Host     :</text>
-      <text x="80" y="56">Bhanjanagar, Ganjam, Odisha</text>
+    <g>
+      <text x="0" y="104" class="label" fill="#d29922">Stack:</text>
+      <text x="75" y="104">MERN • Tailwind CSS • Python • C++</text>
     </g>
-    <g class="animated-row" style="animation-delay: 0.27s;">
-      <text x="0" y="80" class="label" fill="#3fb950">Role     :</text>
-      <text x="80" y="80">Full-Stack Developer & AI/ML Enthusiast</text>
+    <g>
+      <text x="0" y="128" class="label" fill="#39c5bb">Focus:</text>
+      <text x="75" y="128">RAG Systems • Computer Vision • Web3D</text>
     </g>
-    <g class="animated-row" style="animation-delay: 0.33s;">
-      <text x="0" y="104" class="label" fill="#d29922">Stack    :</text>
-      <text x="80" y="104">MERN • Tailwind CSS • Python • C++</text>
+    <g>
+      <text x="0" y="152" class="label" fill="#58a6ff">Projects:</text>
+      <text x="75" y="152">Ntariksh • NirmaanConnect • Eco Hack '26</text>
     </g>
-    <g class="animated-row" style="animation-delay: 0.39s;">
-      <text x="0" y="128" class="label" fill="#39c5bb">Focus    :</text>
-      <text x="80" y="128">RAG Systems • Computer Vision • Web3D</text>
+    <g>
+      <text x="0" y="176" class="label" fill="#3fb950">Status:</text>
+      <text x="75" y="176">Building, Learning & Scaling 🚀</text>
     </g>
-    <g class="animated-row" style="animation-delay: 0.45s;">
-      <text x="0" y="152" class="label" fill="#58a6ff">Projects :</text>
-      <text x="80" y="152">Ntariksh • NirmaanConnect • Eco Hack '26</text>
-    </g>
-    <g class="animated-row" style="animation-delay: 0.51s;">
-      <text x="0" y="176" class="label" fill="#3fb950">Status   :</text>
-      <text x="80" y="176">Building, Learning & Scaling 🚀</text>
-    </g>
-    <g class="animated-row" style="animation-delay: 0.62s;">
+    <g>
       <circle cx="6" cy="214" r="6" fill="#58a6ff" />
       <circle cx="26" cy="214" r="6" fill="#3fb950" />
       <circle cx="46" cy="214" r="6" fill="#bc8cff" />
