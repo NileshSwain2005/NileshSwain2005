@@ -1,66 +1,48 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="490" height="370" viewBox="0 0 490 370">
   <style>
-    .bg { fill: #0d1117; rx: 8px; }
-    .border { fill: none; stroke: #30363d; stroke-width: 1.5; rx: 8px; }
+    .bg { fill: #0d1117; }
+    .border { fill: none; stroke: #30363d; stroke-width: 1.5; }
     .dot-red { fill: #ff5f56; }
     .dot-yellow { fill: #ffbd2e; }
     .dot-green { fill: #27c93f; }
-    .title { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 11px; fill: #8b949e; }
-    .term-text { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 11.5px; fill: #c9d1d9; }
-    .label { fill: #8b949e; font-weight: 600; }
+    .title { font-family: monospace; font-size: 11px; fill: #8b949e; }
+    .term-text { font-family: monospace; font-size: 11.5px; fill: #c9d1d9; }
+    .label { font-weight: 600; }
   </style>
-  <rect width="100%" height="100%" class="bg" />
-  <rect width="100%" height="100%" class="border" />
+  <rect width="490" height="370" rx="8" class="bg" />
+  <rect width="490" height="370" rx="8" class="border" />
   
-  <!-- Terminal Top Window Controls -->
   <circle cx="16" cy="16" r="4" class="dot-red" />
   <circle cx="28" cy="16" r="4" class="dot-yellow" />
   <circle cx="40" cy="16" r="4" class="dot-green" />
-  <text x="56" y="19" class="title">nilesh@github ~ neofetch</text>
-  <line x1="0" y1="32" x2="100%" y2="32" stroke="#21262d" stroke-width="1" />
+  <text x="56" y="20" class="title">nilesh@github ~ neofetch</text>
+  <line x1="0" y1="32" x2="490" y2="32" stroke="#21262d" stroke-width="1" />
   
-  <!-- Main Terminal Content -->
   <g class="term-text" transform="translate(18, 52)">
     <text x="0" y="0" font-weight="bold" fill="#58a6ff">nilesh</text>
     <text x="42" y="0" fill="#8b949e">@</text>
     <text x="54" y="0" font-weight="bold" fill="#bc8cff">gift-bbsr</text>
     <text x="0" y="12" fill="#30363d">------------------------------------------</text>
-    <g>
-      <text x="0" y="32" class="label" fill="#58a6ff">OS:</text>
-      <text x="75" y="32">GIFT Autonomous, BBSR (CSE '28)</text>
-    </g>
-    <g>
-      <text x="0" y="56" class="label" fill="#bc8cff">Host:</text>
-      <text x="75" y="56">Bhanjanagar, Ganjam, Odisha</text>
-    </g>
-    <g>
-      <text x="0" y="80" class="label" fill="#3fb950">Role:</text>
-      <text x="75" y="80">Full-Stack Developer & AI/ML Enthusiast</text>
-    </g>
-    <g>
-      <text x="0" y="104" class="label" fill="#d29922">Stack:</text>
-      <text x="75" y="104">MERN • Tailwind CSS • Python • C++</text>
-    </g>
-    <g>
-      <text x="0" y="128" class="label" fill="#39c5bb">Focus:</text>
-      <text x="75" y="128">RAG Systems • Computer Vision • Web3D</text>
-    </g>
-    <g>
-      <text x="0" y="152" class="label" fill="#58a6ff">Projects:</text>
-      <text x="75" y="152">Ntariksh • NirmaanConnect • Eco Hack '26</text>
-    </g>
-    <g>
-      <text x="0" y="176" class="label" fill="#3fb950">Status:</text>
-      <text x="75" y="176">Building, Learning & Scaling 🚀</text>
-    </g>
-    <g>
-      <circle cx="6" cy="214" r="6" fill="#58a6ff" />
-      <circle cx="26" cy="214" r="6" fill="#3fb950" />
-      <circle cx="46" cy="214" r="6" fill="#bc8cff" />
-      <circle cx="66" cy="214" r="6" fill="#d29922" />
-      <circle cx="86" cy="214" r="6" fill="#39c5bb" />
-      <circle cx="106" cy="214" r="6" fill="#f85149" />
-      <circle cx="126" cy="214" r="6" fill="#ffffff" />
-    </g>
+    <text x="0" y="32" class="label" fill="#58a6ff">OS:</text>
+    <text x="75" y="32" fill="#c9d1d9">GIFT Autonomous, BBSR (CSE '28)</text>
+    <text x="0" y="56" class="label" fill="#bc8cff">Host:</text>
+    <text x="75" y="56" fill="#c9d1d9">Bhanjanagar, Ganjam, Odisha</text>
+    <text x="0" y="80" class="label" fill="#3fb950">Role:</text>
+    <text x="75" y="80" fill="#c9d1d9">Full-Stack Developer &amp; AI/ML Enthusiast</text>
+    <text x="0" y="104" class="label" fill="#d29922">Stack:</text>
+    <text x="75" y="104" fill="#c9d1d9">MERN • Tailwind CSS • Python • C++</text>
+    <text x="0" y="128" class="label" fill="#39c5bb">Focus:</text>
+    <text x="75" y="128" fill="#c9d1d9">RAG Systems • Computer Vision • Web3D</text>
+    <text x="0" y="152" class="label" fill="#58a6ff">Projects:</text>
+    <text x="75" y="152" fill="#c9d1d9">Ntariksh • NirmaanConnect • Eco Hack '26</text>
+    <text x="0" y="176" class="label" fill="#3fb950">Status:</text>
+    <text x="75" y="176" fill="#c9d1d9">Building, Learning &amp; Scaling 🚀</text>
+    <circle cx="6" cy="214" r="6" fill="#58a6ff" />
+    <circle cx="26" cy="214" r="6" fill="#3fb950" />
+    <circle cx="46" cy="214" r="6" fill="#bc8cff" />
+    <circle cx="66" cy="214" r="6" fill="#d29922" />
+    <circle cx="86" cy="214" r="6" fill="#39c5bb" />
+    <circle cx="106" cy="214" r="6" fill="#f85149" />
+    <circle cx="126" cy="214" r="6" fill="#ffffff" />
   </g>
 </svg>
